@@ -1,0 +1,2 @@
+# mybatis_AutoMapper
+使用maven或者bat生成库表映射相关文件
