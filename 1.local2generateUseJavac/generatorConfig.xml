@@ -3,33 +3,33 @@
   PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
   "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
 <generatorConfiguration>
-    <!--Êý¾Ý¿âÇý¶¯-->
+    <!--æ•°æ®åº“é©±åŠ¨-->
     <classPathEntry    location="mysql-connector-java-5.1.14-bin.jar"/>
     <context id="DB2Tables"    targetRuntime="MyBatis3">
         <commentGenerator>
             <property name="suppressDate" value="true"/>
             <property name="suppressAllComments" value="true"/>
         </commentGenerator>
-        <!--Êý¾Ý¿âÁ´½ÓµØÖ·ÕËºÅÃÜÂë-->
-        <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://localhost/testdb" userId="root" password="6755468">
+        <!--æ•°æ®åº“é“¾æŽ¥åœ°å€è´¦å·å¯†ç -->
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://localhost/testdb" userId="root" password="123456">
         </jdbcConnection>
         <javaTypeResolver>
             <property name="forceBigDecimals" value="false"/>
         </javaTypeResolver>
-        <!--Éú³ÉModelÀà´æ·ÅÎ»ÖÃ-->
+        <!--ç”ŸæˆModelç±»å­˜æ”¾ä½ç½®-->
         <javaModelGenerator targetPackage="com.zm.entity" targetProject="src">
             <property name="enableSubPackages" value="true"/>
             <property name="trimStrings" value="true"/>
         </javaModelGenerator>
-        <!--Éú³ÉÓ³ÉäÎÄ¼þ´æ·ÅÎ»ÖÃ-->
+        <!--ç”Ÿæˆæ˜ å°„æ–‡ä»¶å­˜æ”¾ä½ç½®-->
         <sqlMapGenerator targetPackage="mybatis" targetProject="config">
             <property name="enableSubPackages" value="true"/>
         </sqlMapGenerator>
-        <!--Éú³ÉDaoÀà´æ·ÅÎ»ÖÃ-->
+        <!--ç”ŸæˆDaoç±»å­˜æ”¾ä½ç½®-->
         <javaClientGenerator type="XMLMAPPER" targetPackage="com.zm.dao" targetProject="src">
             <property name="enableSubPackages" value="true"/>
         </javaClientGenerator>
-        <!--Éú³É¶ÔÓ¦±í¼°ÀàÃû-->
+        <!--ç”Ÿæˆå¯¹åº”è¡¨åŠç±»å-->
         <table tableName="t_user" domainObjectName="tUser" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
     </context>
 </generatorConfiguration>
