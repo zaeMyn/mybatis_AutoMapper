@@ -62,11 +62,11 @@
         <javaClientGenerator type="XMLMAPPER" targetPackage="com.zzm.dal.mapper" targetProject="H:\environment\Intellij\github\my\mybatis_AutoMapper\2.maven-generator\src\main\java">
             <property name="enableSubPackages" value="false" />
         </javaClientGenerator>
-         <table schema="fescar" tableName="t_asset" domainObjectName="AssetEntity">
+         <table catalog="fescar" schema="fescar" tableName="t_asset" domainObjectName="AssetEntity">
             <property name="useActualColumnNames" value="false"/>
             <columnOverride column="id" javaType="java.lang.String" property="id" />
-			<columnOverride column="voucher_code" javaType="java.util.String" property="voucherCode" />
-			<columnOverride column="amount" javaType="java.lang.Long" property="amount" />
+            <columnOverride column="voucher_code" javaType="java.util.String" property="voucherCode" />
+            <columnOverride column="amount" javaType="java.lang.Long" property="amount" />
         </table>
     </context>
 </generatorConfiguration>
