@@ -4,6 +4,6 @@
 
 按图片顺序
 
-![mybatis-plugin](pic\mybatis-plugin.png)
+![mybatis-plugin](https://github.com/zaeMyn/mybatis_AutoMapper/blob/master/2.maven-generator/pic/mybatis-plugin.png)
 
-![generate](pic\generate.png)
+![generate](https://github.com/zaeMyn/mybatis_AutoMapper/blob/master/2.maven-generator/pic/generate.png)
