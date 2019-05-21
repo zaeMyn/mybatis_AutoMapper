@@ -1,7 +1,6 @@
 package com.zzm.dal.domain;
 
 import java.io.Serializable;
-import java.util.String;
 
 public class AssetEntity implements Serializable {
     private String id;

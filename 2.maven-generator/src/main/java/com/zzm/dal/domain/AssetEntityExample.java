@@ -2,7 +2,6 @@ package com.zzm.dal.domain;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.String;
 
 public class AssetEntityExample {
     protected String orderByClause;
