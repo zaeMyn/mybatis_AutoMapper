@@ -23,10 +23,19 @@
         <plugin type="org.mybatis.generator.plugins.RowBoundsPlugin"></plugin>
         <plugin type="org.mybatis.generator.plugins.RenameExampleClassPlugin"></plugin>
         <plugin type="org.mybatis.generator.plugins.SerializablePlugin"></plugin>
-        <commentGenerator>
+
+        <!--如果是通过mybatis-generate生成代码，则需要在pom的plugin-dependency中引入自定义plugin,与Generator所在jar,
+        因mybatis的classLoader读取的是本身；要想读到其他第三方的内容，则需要install后引入jar.如果是通过java生成，则不需要-->
+        <commentGenerator type="com.zzm.dal.CommentGenerator">
+         <!-- 是否去除自动生成的注释 true：是 ： false:否 -->
+         <property name="suppressAllComments" value="true"/>
+         <property name="suppressDate" value="true"/>
+         <property name="addRemarkComments" value="true"/>
+       </commentGenerator>
+       <!-- <commentGenerator>
             <property name="suppressDate" value="false"/>
             <property name="suppressAllComments" value="true"/>
-        </commentGenerator>
+        </commentGenerator>-->
         <!--mysql数据库连接-->
         <jdbcConnection driverClass="com.mysql.jdbc.Driver"
                         connectionURL="jdbc:mysql://localhost:3309/fescar"

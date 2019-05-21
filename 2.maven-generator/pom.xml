@@ -6,6 +6,7 @@
     <version>1.0</version>
 <!--    <packaging>pom</packaging>-->
 	<dependencies>
+        <!--通过java的话，此dependency直接生效-->
 		<!-- mybatis generator 自动生成代码插件 -->
 		<dependency>
 			<groupId>org.mybatis.generator</groupId>
@@ -37,6 +38,12 @@
                         <artifactId>mysql-connector-java</artifactId>
                         <version>5.1.6</version>
                     </dependency>
+                    <!--通过maven mmybatis-generate插件，且配置了自定义config plugin，则需要考虑此段-->
+                   <!-- <dependency>
+                        <groupId>org.mybatis.generator</groupId>
+                        <artifactId>mybatis-generator-core</artifactId>
+                        <version>1.3.5</version>
+                    </dependency>-->
                 </dependencies>
 			</plugin>
 		</plugins>
