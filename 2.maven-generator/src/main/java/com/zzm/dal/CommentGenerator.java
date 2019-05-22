@@ -5,12 +5,14 @@ import java.util.Properties;
 import org.mybatis.generator.api.IntrospectedColumn;
 import org.mybatis.generator.api.IntrospectedTable;
 import org.mybatis.generator.api.dom.java.Field;
+import org.mybatis.generator.api.dom.java.JavaElement;
 import org.mybatis.generator.internal.DefaultCommentGenerator;
 import org.mybatis.generator.internal.util.StringUtility;
 
 /**
- * 自定义注释生成器
- * Created by macro on 2018/4/26.
+ * @author zhengzm
+ * @date 2019/5/20 12:17
+ * @description  自定义注释生成器
  */
 public class CommentGenerator extends DefaultCommentGenerator {
     private boolean addRemarkComments = false;
@@ -50,6 +52,11 @@ public class CommentGenerator extends DefaultCommentGenerator {
         }
         addJavadocTag(field, false);
         field.addJavaDocLine(" */");
+    }
+
+    @Override
+    protected void addJavadocTag(JavaElement javaElement,
+                                 boolean markAsDoNotDelete) {
     }
 
 }
