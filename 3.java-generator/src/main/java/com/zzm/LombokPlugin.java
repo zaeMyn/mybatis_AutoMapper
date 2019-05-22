@@ -47,6 +47,17 @@ public class LombokPlugin extends PluginAdapter {
     }
 
     @Override
+    public boolean modelExampleClassGenerated(TopLevelClass topLevelClass,
+                                              IntrospectedTable introspectedTable) {
+        //添加Example的注释
+        topLevelClass.addJavaDocLine("/**");
+        topLevelClass.addJavaDocLine("* @author Mybatis Generator");
+        topLevelClass.addJavaDocLine("* @date " + date2Str(new Date()));
+        topLevelClass.addJavaDocLine("*/");
+        return true;
+    }
+
+    @Override
     public boolean clientGenerated(Interface interfaze, TopLevelClass topLevelClass, IntrospectedTable introspectedTable) {
         //Mapper文件的注释
         interfaze.addJavaDocLine("/**");
