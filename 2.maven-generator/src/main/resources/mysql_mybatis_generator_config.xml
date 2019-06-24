@@ -20,11 +20,20 @@
     introspectedColumnImpl：类全限定名，用于扩展MBG
 -->
     <context id="mysqlContext" targetRuntime="MyBatis3" defaultModelType="flat">
+        <!-- 为sql关键字添加分隔符,默认为双引号，Oracle适用 -->
+        <property name="autoDelimitKeywords" value="true"/>
+        <!-- 如果是mysql，则使用以下的定义-->
+        <!--<property name="beginningDelimiter" value="`"/>
+        <property name="endingDelimiter" value="`"/>-->
+
+
         <plugin type="org.mybatis.generator.plugins.RowBoundsPlugin"></plugin>
         <plugin type="org.mybatis.generator.plugins.RenameExampleClassPlugin"></plugin>
         <plugin type="org.mybatis.generator.plugins.SerializablePlugin"></plugin>
-        <!--自定义覆盖旧的xml，因默认是追加xml，存在重复的情况，所以要修改-->
-        <plugin type="com.zzm.OverwriteXmlPlugin"></plugin>
+        <!--自定义覆盖旧的xml，因默认是追加xml，存在重复的情况，所以要修改.可以直接使用官方的UnmergeableXmlMappersPlugin替代-->
+<!--        <plugin type="com.zzm.OverwriteXmlPlugin"></plugin>-->
+        <plugin type="org.mybatis.generator.plugins.UnmergeableXmlMappersPlugin"></plugin>
+
         <plugin type="com.zzm.LombokPlugin"></plugin>
         <!--自定义使用lombok注解实体对象-->
         <!--
