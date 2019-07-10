@@ -35,8 +35,13 @@
         <!--指定生成mapper接口的的路径-->
         <javaClientGenerator type="XMLMAPPER" targetPackage="com.zzm.mapper"
                              targetProject="H:\environment\Intellij\github\my\mybatis_AutoMapper\3.java-generator\src\main\java"/>
-        <table tableName="t_asset" domainObjectName="AssertEntity">
+        <!--<table tableName="t_asset" domainObjectName="AssertEntity">
             <generatedKey column="id" sqlStatement="MySql" identity="true"/>
+        </table>-->
+        <table tableName="user" domainObjectName="UserEntity">
+            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
+            <columnOverride  column="sex" property="sex" jdbcType="CHAR" javaType="com.zzm.enums.SexEnum"
+                             typeHandler="com.zzm.enums.SexEnumTypeHandler"/>
         </table>
     </context>
 </generatorConfiguration>
