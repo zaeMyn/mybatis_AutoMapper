@@ -11,8 +11,8 @@
         <property name="javaFileEncoding" value="UTF-8"/>
         <plugin type="org.mybatis.generator.plugins.RowBoundsPlugin"></plugin>
         <plugin type="org.mybatis.generator.plugins.RenameExampleClassPlugin"></plugin>
-        <!-- 为模型生成序列化方法-->
-        <plugin type="org.mybatis.generator.plugins.SerializablePlugin"/>
+        <!-- 为模型生成序列化方法（父类如果实现了序列，子类不需要实现，会自动继承）-->
+<!--        <plugin type="org.mybatis.generator.plugins.SerializablePlugin"/>-->
         <!-- 为生成的Java模型创建一个toString方法 -->
         <plugin type="org.mybatis.generator.plugins.ToStringPlugin"/>
         <!--使Mapper集成基类-->
