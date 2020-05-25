@@ -85,7 +85,7 @@ public class UserEntityExample {
             if (value == null) {
                 throw new RuntimeException("Value for " + property + " cannot be null");
             }
-            sexCriteria.add(new Criterion(condition, value, "com.zzm.enums.SexEnumTypeHandler"));
+            sexCriteria.add(new Criterion(condition, value, "com.zzm.handler.SexEnumTypeHandler"));
             allCriteria = null;
         }
 
@@ -93,7 +93,7 @@ public class UserEntityExample {
             if (value1 == null || value2 == null) {
                 throw new RuntimeException("Between values for " + property + " cannot be null");
             }
-            sexCriteria.add(new Criterion(condition, value1, value2, "com.zzm.enums.SexEnumTypeHandler"));
+            sexCriteria.add(new Criterion(condition, value1, value2, "com.zzm.handler.SexEnumTypeHandler"));
             allCriteria = null;
         }
 

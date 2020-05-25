@@ -38,10 +38,13 @@
         <!--<table tableName="t_asset" domainObjectName="AssertEntity">
             <generatedKey column="id" sqlStatement="MySql" identity="true"/>
         </table>-->
-        <table tableName="user" domainObjectName="UserEntity">
-            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
-            <columnOverride  column="sex" property="sex" jdbcType="CHAR" javaType="com.zzm.enums.SexEnum"
-                             typeHandler="com.zzm.enums.SexEnumTypeHandler"/>
+<!--        <table tableName="user" domainObjectName="UserEntity">-->
+<!--            <generatedKey column="id" sqlStatement="MySql" identity="true"/>-->
+<!--            <columnOverride  column="sex" property="sex" jdbcType="CHAR" javaType="com.zzm.enums.SexEnum"-->
+<!--                             typeHandler="com.zzm.handler.SexEnumTypeHandler"/>-->
+<!--        </table>-->
+        <table tableName="picture_info">
+            <columnOverride  column="pic_bytes" javaType="byte[]" typeHandler="ccom.zzm.handler.Blob2ByteArrayTypeHandler"/>
         </table>
     </context>
 </generatorConfiguration>
