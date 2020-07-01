@@ -36,7 +36,7 @@
                     <dependency>
                         <groupId>mysql</groupId>
                         <artifactId>mysql-connector-java</artifactId>
-                        <version>5.1.6</version>
+                        <version>8.0.16</version>
                     </dependency>
                     <!--通过maven mmybatis-generate插件，且配置了自定义config plugin，则需要考虑此段-->
                    <!-- <dependency>
